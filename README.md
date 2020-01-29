@@ -1,4 +1,4 @@
-# Python Tools for Field-Aligned Hydrodynamic Models
+a# Python Tools for Field-Aligned Hydrodynamic Models
 
 This repo contains materials for my demo/presentation of using Python tools to configure, parse, 
 and visualize results from field-aligned hydrodynamic models of flares for the ISSI Meeting ["Interrogating Field-Aligned Solar Flare Models: Comparing, Contrasting And Improving"](http://www.issibern.ch/teams/fieldsolflare/).
@@ -26,20 +26,35 @@ and visualize results from field-aligned hydrodynamic models of flares for the I
   * Lots of time reinventing the wheel
   * If there is little code re-use, a lot of maintenance is required (or things break!)
   * Difficult to compare results
+  * To "scale" loop studies, we need tools that scale too!
 * Proposal (maybe a bit radical...)
-  * Common API *across* field-aligned codes
+  * Common API for post-processing *across* field-aligned codes
+  * Has to be general enough to suit all cases, useful enough to justify effort
   * Underlying logic separated from user-interface
-  * Code *collaboratively* and *openly* developed in Python
-  * Documentation and testing, best practices
+  * Code *collaboratively* and *openly* developed (preferably in Python, other suggestions?)
+  * Documentation, testing, best practices
+* Benefits
+  * Ease of configuration, post processing means more users of these codes!
+  * More users = more papers on field-aligned modeling = more citations
+  * Reduce boilerplate code needed for every project
 * Demo of `hydrad_tools`
-  * (Briefly) Configuring HYDRAD runs
+  * Configuring HYDRAD runs--compliments Steve's HYDRAD intro on Monday; advantageous when setting up parameter space, arcade models
   * Parsing HYDRAD results
   * Visualizing HYDRAD results
   * A prototype for applying `hydrad_tools` to RADYN
+* Forward Modeling 1D Results with `sunpy.coordinates`
+  * Run basic flare simulation (i.e. with beam heating)
+  * Construct simple field geometry
+  * Synthesize AIA emission (e.g. 131, 171)
+  * Look at different LOS angles
+  * Demonstrate power of this approach
 * TODOs at Meeting
   * Does anyone actually want this? Are we happy with current tooling? (totally fine!)
   * Agree on common functionality
   * Discuss an ideal interface
+  * Maybe a more generalized object-oriented interface to data?
+
+ This really needs to be compressed...a lot.
 
 
 ## Materials
